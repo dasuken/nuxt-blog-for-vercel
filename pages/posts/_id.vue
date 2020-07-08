@@ -66,12 +66,15 @@ export default {
   }
 
   code {
-    display: block;
-    width: 100% !important;
-    background-color: #322931 !important;
-    color: gainsboro !important;
+    background-color: #322931;
+    color: gainsboro;
+    padding: 5px;
+  }
+
+  pre code {
+    display: block !important;
     padding: 1rem !important;
-    margin: 1rem 0;
+    margin: 1rem 0 !important;
   }
 
   p {
@@ -79,15 +82,15 @@ export default {
   }
 
   h2 {
-    padding: 12px;
+    padding: 10px 0;
     margin: 3rem 0 2rem 0;
-    border-left: 7px solid #007d7a;
+    border-bottom: 4px dashed #007d7a;
   }
 
   h3 {
-    padding-bottom: 5px;
+    padding: 5px;
     margin: 2rem 0 1rem 0;
-    border-bottom: 2px solid #007d7a;
+    border-left: 10px solid #007d7a;
   }
 
   ul,
