@@ -1,11 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
 
+
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
+
   mode: 'spa',
   /*
    ** Nuxt target
@@ -59,7 +57,7 @@ export default {
    */
   modules: [
     '@nuxtjs/axios',
-    // '@nuxtjs/dotenv',
+    '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
   ],
   markdownit: {

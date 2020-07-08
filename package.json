@@ -20,8 +20,6 @@
     "@nuxtjs/vuetify": "^1.11.2",
     "contentful": "^7.14.5",
     "dayjs": "^1.8.29",
-    "dotenv": "^8.2.0",
-    "fs": "0.0.1-security",
     "node-sass": "^4.14.1",
     "nuxt": "^2.13.0",
     "prismjs": "^1.20.0",
