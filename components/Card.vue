@@ -7,12 +7,12 @@
     @mouseleave="n -= 6"
   >
     <div style="height: 100%;" class="red"></div>
-    <v-img :src="thumbnail" class="align-end"></v-img>
+    <v-img :src="thumbnail" aspect-ratio="2" class="align-end"></v-img>
     <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
     <v-card-title class="text-h6 py-2 pb-4" style="height: 80px;">{{
       title | shortenText(35)
     }}</v-card-title>
-    <div class="ml-2 pb-2">
+    <div class="ml-2 pb-2" style="height: 40px;">
       <v-chip
         class="ma-1"
         color="basil"
