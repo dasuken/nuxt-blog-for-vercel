@@ -1,9 +1,9 @@
 import colors from 'vuetify/es5/util/colors'
 require('dotenv').config()
-
+const envSet = require('./env.contentful.js')
 
 export default {
-
+  env: envSet,
   mode: 'spa',
   /*
    ** Nuxt target
