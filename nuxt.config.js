@@ -1,5 +1,4 @@
 import colors from 'vuetify/es5/util/colors'
-require('dotenv').config()
 const envSet = require('./env.contentful.js')
 
 export default {
@@ -50,7 +49,6 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
-    '@nuxtjs/dotenv',
   ],
   /*
    ** Nuxt.js modules
