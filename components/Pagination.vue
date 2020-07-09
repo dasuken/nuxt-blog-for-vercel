@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center">
+  <div class="text-center my-10">
     <v-icon v-if="hasPrev()" @click="changePage(prevPage)">chevron_left</v-icon>
     <v-chip
       dark
@@ -28,7 +28,7 @@ export default {
   },
   data() {
     return {
-      current: parseInt(this.$route.params.id),
+      current: parseInt(this.$route.params.id) || 1,
     }
   },
   methods: {

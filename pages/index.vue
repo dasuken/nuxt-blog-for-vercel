@@ -2,7 +2,7 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" md="10">
-        <v-row>
+        <v-row justify="center">
           <v-col v-for="post in posts" :key="post.sys.id" cols="12" sm="6">
             <Card
               :id="post.sys.id"
@@ -47,7 +47,7 @@ export default {
       promisePosts,
       promiseTags,
     ])
-    console.log(entryPosts.total)
+
     return {
       posts: entryPosts.items,
       tags: entryTags.items,
