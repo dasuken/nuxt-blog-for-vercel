@@ -31,8 +31,7 @@
 <script>
 import Card from '@/components/Card.vue'
 import Tag from '@/components/Tag.vue'
-import { createClient } from '@/plugins/contentful.js'
-const client = createClient()
+import client from '@/plugins/contentful.js'
 
 export default {
   components: {

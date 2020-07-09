@@ -33,10 +33,9 @@
 </template>
 
 <script>
-import { createClient } from '@/plugins/contentful.js'
+import client from '@/plugins/contentful.js'
 import Prism from '@/plugins/prism'
 
-const client = createClient()
 export default {
   async asyncData({ params }) {
     const post = await client.getEntry(params.id)

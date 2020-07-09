@@ -4,15 +4,13 @@
       <v-col cols="12" md="10">
         <v-row>
           <v-col v-for="post in posts" :key="post.sys.id" cols="12" sm="6">
-            <transition name="test">
-              <Card
-                :id="post.sys.id"
-                :title="post.fields.title"
-                :thumbnail="post.fields.thumbnail.fields.file.url"
-                :tags="post.fields.tags"
-                :updatedAt="post.fields.updatedAt"
-              />
-            </transition>
+            <Card
+              :id="post.sys.id"
+              :title="post.fields.title"
+              :thumbnail="post.fields.thumbnail.fields.file.url"
+              :tags="post.fields.tags"
+              :updatedAt="post.fields.updatedAt"
+            />
           </v-col>
         </v-row>
       </v-col>
@@ -29,17 +27,18 @@
 <script>
 import Card from '@/components/Card.vue'
 import Tag from '@/components/Tag.vue'
-import { createClient } from '@/plugins/contentful.js'
-const client = createClient()
+import client from '@/plugins/contentful.js'
 
 export default {
   components: {
     Card,
     Tag,
   },
-  async asyncData({ params }) {
+  async asyncData({ query }) {
     const promisePosts = client.getEntries({
       content_type: 'post',
+      order: '-sys.createdAt',
+      limit: 10,
     })
     const promiseTags = client.getEntries({
       content_type: 'tags',
@@ -48,6 +47,7 @@ export default {
       promisePosts,
       promiseTags,
     ])
+    console.log(entryPosts.total)
     return {
       posts: entryPosts.items,
       tags: entryTags.items,
@@ -57,6 +57,10 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.margin--pagination {
+  margin: 0px 1px;
+}
+
 .border--bottom {
   border-bottom: 5px solid #356859;
 
