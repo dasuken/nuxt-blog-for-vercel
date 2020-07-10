@@ -57,6 +57,9 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
+    ['@nuxtjs/google-analytics', {
+      id: process.env.TRACKING_ID
+    }],
   ],
   markdownit: {
     injected: true

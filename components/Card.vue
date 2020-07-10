@@ -1,35 +1,33 @@
 <template>
-  <v-card
-    nuxt-link
-    :to="`/posts/${id}`"
-    :elevation="n"
-    @mouseover="n += 6"
-    @mouseleave="n -= 6"
-  >
-    <div style="height: 100%;" class="red"></div>
-    <v-img :src="thumbnail" aspect-ratio="2" class="align-end"></v-img>
-    <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
-    <v-card-title
-      class="text-h6 py-2 pb-4 font-weight-bold card--title"
-      style="height: 80px;"
-      >{{ title | shortenText }}</v-card-title
-    >
-    <div class="ml-2 pb-2" style="height: 40px;">
-      <v-chip
-        class="ma-1"
-        color="basil"
-        tag
-        small
-        outlined
-        v-for="tag in tags"
-        :key="tag.sys.id"
-        n-link
-        :to="`/tags/${tag.sys.id}`"
-      >
-        {{ tag.fields.name }}
-      </v-chip>
-    </div>
-  </v-card>
+  <v-hover>
+    <template v-slot="{ hover }">
+      <v-card nuxt-link :to="`/posts/${id}`" :elevation="hover ? 13 : 3">
+        <div style="height: 100%;" class="red"></div>
+        <v-img :src="thumbnail" aspect-ratio="2" class="align-end"></v-img>
+        <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
+        <v-card-title
+          class="text-h6 py-2 pb-4 font-weight-bold card--title"
+          style="height: 80px;"
+          >{{ title | shortenText }}</v-card-title
+        >
+        <div class="ml-2 pb-2" style="height: 40px;">
+          <v-chip
+            class="ma-1"
+            color="basil"
+            tag
+            small
+            outlined
+            v-for="tag in tags"
+            :key="tag.sys.id"
+            n-link
+            :to="`/tags/${tag.sys.id}`"
+          >
+            {{ tag.fields.name }}
+          </v-chip>
+        </div>
+      </v-card>
+    </template>
+  </v-hover>
 </template>
 
 <script>
