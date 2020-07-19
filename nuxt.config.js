@@ -24,6 +24,7 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || '',
       },
+      { name: 'google-site-verification', content: '3v_zumBJHEvjPHU6KNX8fnnPQoR5jDz4ot60wi10imY' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -49,6 +50,9 @@ export default {
   buildModules: [
     '@nuxtjs/eslint-module',
     '@nuxtjs/vuetify',
+    ['@nuxtjs/google-analytics', {
+      id: process.env.TRACKING_ID
+    }],
   ],
   /*
    ** Nuxt.js modules
@@ -57,9 +61,6 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/dotenv',
     '@nuxtjs/markdownit',
-    ['@nuxtjs/google-analytics', {
-      id: process.env.TRACKING_ID
-    }],
   ],
   markdownit: {
     injected: true

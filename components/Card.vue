@@ -12,13 +12,13 @@
         >
         <div class="ml-2 pb-2" style="height: 40px;">
           <v-chip
+            v-for="tag in tags"
+            :key="tag.sys.id"
             class="ma-1"
             color="basil"
             tag
             small
             outlined
-            v-for="tag in tags"
-            :key="tag.sys.id"
             n-link
             :to="`/tags/${tag.sys.id}`"
           >
