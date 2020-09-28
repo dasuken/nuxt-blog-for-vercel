@@ -2,12 +2,12 @@
   <div class="text-center my-10">
     <v-icon v-if="hasPrev()" @click="changePage(prevPage)">chevron_left</v-icon>
     <v-chip
+      v-for="n in totalPages"
+      :key="n"
       dark
       tag
       :class="{ 'orange darken-3': n === current }"
       style="margin: 0 3px;"
-      v-for="n in 4"
-      :key="n"
       @click="changePage(n)"
     >
       {{ n }}
@@ -31,17 +31,6 @@ export default {
       current: parseInt(this.$route.params.id) || 1,
     }
   },
-  methods: {
-    hasPrev() {
-      return this.current > 1
-    },
-    hasNext() {
-      return this.current < 4
-    },
-    changePage(page) {
-      this.$router.push(`/articles/${page}`)
-    },
-  },
   computed: {
     totalPages() {
       return Math.ceil(this.totalCount / 10)
@@ -51,6 +40,17 @@ export default {
     },
     prevPage() {
       return this.current - 1
+    },
+  },
+  methods: {
+    hasPrev() {
+      return this.current > this.totalPages
+    },
+    hasNext() {
+      return this.current < this.totalPages
+    },
+    changePage(page) {
+      this.$router.push(`/articles/${page}`)
     },
   },
 }

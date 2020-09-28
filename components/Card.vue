@@ -43,12 +43,15 @@ export default {
     },
     thumbnail: {
       type: String,
+      default: '',
     },
     tags: {
       type: Array,
+      default: null,
     },
     updatedAt: {
       type: String,
+      default: '',
     },
   },
   data() {

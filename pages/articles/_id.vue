@@ -10,7 +10,7 @@
                 :title="post.fields.title"
                 :thumbnail="post.fields.thumbnail.fields.file.url"
                 :tags="post.fields.tags"
-                :updatedAt="post.fields.updatedAt"
+                :updated-at="post.fields.updatedAt"
               />
             </v-col>
           </v-row>
@@ -25,7 +25,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <Pagination :totalCount="posts.total" />
+    <Pagination :total-count="posts.total" />
   </section>
 </template>
 
@@ -41,10 +41,12 @@ export default {
     Tag,
     Pagination,
   },
-  async asyncData() {
+  async asyncData({ params }) {
+    console.log(params.id)
     const promisePosts = client.getEntries({
       content_type: 'post',
       order: '-sys.createdAt',
+      skip: 10 * (params.id - 1),
       limit: 10,
     })
     const promiseTags = client.getEntries({
@@ -54,7 +56,7 @@ export default {
       promisePosts,
       promiseTags,
     ])
-    console.log(entryPosts.total)
+
     return {
       posts: entryPosts.items,
       tags: entryTags.items,

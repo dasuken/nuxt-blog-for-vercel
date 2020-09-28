@@ -9,7 +9,7 @@
               :title="post.fields.title"
               :thumbnail="post.fields.thumbnail.fields.file.url"
               :tags="post.fields.tags"
-              :updatedAt="post.fields.updatedAt"
+              :updated-at="post.fields.updatedAt"
             />
           </v-col>
         </v-row>
@@ -21,6 +21,9 @@
         <Tag v-for="tag in tags" :key="tag.sys.id" :tag="tag" />
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <Pagination :total-count="posts.length" />
+    </v-row>
   </v-container>
 </template>
 
@@ -28,11 +31,13 @@
 import Card from '@/components/Card.vue'
 import Tag from '@/components/Tag.vue'
 import client from '@/plugins/contentful.js'
+import Pagination from '@/components/Pagination.vue'
 
 export default {
   components: {
     Card,
     Tag,
+    Pagination,
   },
   async asyncData({ query }) {
     const promisePosts = client.getEntries({
