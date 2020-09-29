@@ -25,7 +25,7 @@
         </v-col>
       </v-row>
     </v-container>
-    <Pagination :total-count="posts.total" />
+    <Pagination :total-count="totalCount" />
   </section>
 </template>
 
@@ -52,12 +52,16 @@ export default {
     const promiseTags = client.getEntries({
       content_type: 'tags',
     })
+
     const [entryPosts, entryTags] = await Promise.all([
       promisePosts,
       promiseTags,
     ])
 
+    const totalCount = entryPosts.total
+
     return {
+      totalCount,
       posts: entryPosts.items,
       tags: entryTags.items,
     }

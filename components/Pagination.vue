@@ -44,7 +44,7 @@ export default {
   },
   methods: {
     hasPrev() {
-      return this.current > this.totalPages
+      return this.current > 1
     },
     hasNext() {
       return this.current < this.totalPages
