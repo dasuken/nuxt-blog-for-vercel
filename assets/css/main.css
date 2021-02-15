@@ -1,0 +1,9 @@
+.v-application {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 600!important;
+  margin-top: 2rem!important;
+  margin-bottom: 1rem!important;
+}

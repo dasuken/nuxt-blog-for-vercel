@@ -33,6 +33,7 @@ export default {
    */
   css: [
     '@/assets/css/iconfont/material-icons.css',
+    '@/assets/css/main.css',
   ],
   plugins: [
     '@/plugins/prism',

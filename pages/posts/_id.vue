@@ -2,13 +2,13 @@
   <v-container>
     <v-row justify="center">
       <v-col cols="12" sm="10" md="8">
-        <div class="mb-2">
+        <div class="mb-2 font-weight-bold grey--text">
           <span>
             {{ updatedAt }}
           </span>
         </div>
         <h1
-          class="text-h3 font-weight-bold my-3"
+          class="text-h3 font-weight-bold my-12"
           style="word-wrap: break-word;"
         >
           {{ post.fields.title }}
@@ -64,6 +64,10 @@ export default {
     margin: 1rem 0;
   }
 
+  pre {
+    margin-bottom: 20px;
+  }
+
   code {
     background-color: #322931;
     color: gainsboro;
@@ -73,11 +77,6 @@ export default {
   pre code {
     display: block !important;
     padding: 1rem !important;
-    margin: 1rem 0 !important;
-  }
-
-  p {
-    font-weight: 500;
   }
 
   h2 {

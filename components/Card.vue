@@ -1,7 +1,12 @@
 <template>
   <v-hover>
     <template v-slot="{ hover }">
-      <v-card nuxt-link :to="`/posts/${id}`" :elevation="hover ? 13 : 3">
+      <v-card
+        nuxt-link
+        :to="`/posts/${id}`"
+        :elevation="hover ? 13 : 3"
+        class="rounded-lg"
+      >
         <div style="height: 100%;" class="red"></div>
         <v-img :src="thumbnail" aspect-ratio="2" class="align-end"></v-img>
         <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
