@@ -64,6 +64,11 @@ export default {
     margin: 1rem 0;
   }
 
+  strong {
+    font-size: 25px;
+    margin-top: 20px;
+  }
+
   pre {
     margin-bottom: 20px;
   }

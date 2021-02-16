@@ -14,8 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    title: "ぐえ Tech Blog" || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -26,7 +25,7 @@ export default {
       },
       { name: 'google-site-verification', content: '3v_zumBJHEvjPHU6KNX8fnnPQoR5jDz4ot60wi10imY' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/png', href: '/g_small.png'}]
   },
   /*
    ** Global CSS
