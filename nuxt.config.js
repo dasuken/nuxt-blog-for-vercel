@@ -14,7 +14,8 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: "ぐえ Tech Blog" || '',
+    titleTemplate: '%s - ' + 'gue_tech.com',
+    title: "gue_tech.com" || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

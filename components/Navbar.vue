@@ -1,18 +1,20 @@
 <template>
-  <v-card color="basil" style="border-bottom: 2px solid gray;">
-    <v-card-title class="text-center justify-center py-3">
-      <h3
-        class="font-weight-black black--text d-flex align-center"
-        n-link
-        to="/"
-      >
-        <v-avatar size="40">
-          <v-img src="/g_small.png"></v-img>
-        </v-avatar>
-        <n-link to="/">ue Tech Blog</n-link>
-      </h3>
-    </v-card-title>
-  </v-card>
+  <v-row>
+    <v-col cols="12" sm="10">
+      <v-card tile elevation="0">
+        <h3
+          class="font-weight-black black--text d-flex align-center"
+          n-link
+          to="/"
+        >
+          <v-avatar size="40">
+            <v-img src="/g_small.png"></v-img>
+          </v-avatar>
+          <n-link to="/">ue_tech.com</n-link>
+        </h3>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <style>

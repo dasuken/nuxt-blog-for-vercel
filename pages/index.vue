@@ -1,6 +1,6 @@
 <template>
-  <v-container>
-    <v-row justify="center">
+  <div>
+    <v-row>
       <v-col cols="12" sm="10">
         <v-row>
           <v-col v-for="post in posts" :key="post.sys.id" cols="12" sm="6">
@@ -24,7 +24,7 @@
     <v-row justify="center">
       <Pagination :total-count="totalCount" />
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>

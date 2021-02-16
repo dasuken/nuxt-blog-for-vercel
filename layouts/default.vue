@@ -1,9 +1,11 @@
 <template>
   <v-app>
-    <Navbar />
-    <transition name="page">
-      <nuxt />
-    </transition>
+    <v-container>
+      <Navbar />
+      <transition name="page">
+        <nuxt />
+      </transition>
+    </v-container>
   </v-app>
 </template>
 

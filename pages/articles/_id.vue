@@ -1,30 +1,26 @@
 <template>
   <section>
-    <v-container>
-      <v-row justify="center">
-        <v-col cols="12" md="10">
-          <v-row>
-            <v-col v-for="post in posts" :key="post.sys.id" cols="12" sm="6">
-              <Card
-                :id="post.sys.id"
-                :title="post.fields.title"
-                :thumbnail="post.fields.thumbnail.fields.file.url"
-                :tags="post.fields.tags"
-                :updated-at="post.fields.updatedAt"
-              />
-            </v-col>
-          </v-row>
-        </v-col>
-        <v-col cols="12" md="2">
-          <div class="mb-6 text-center">
-            <span class="font-weight-bold border--bottom-slight"
-              >タグ 一覧</span
-            >
-          </div>
-          <Tag v-for="tag in tags" :key="tag.sys.id" :tag="tag" />
-        </v-col>
-      </v-row>
-    </v-container>
+    <v-row justify="center">
+      <v-col cols="12" sm="10">
+        <v-row>
+          <v-col v-for="post in posts" :key="post.sys.id" cols="12" sm="6">
+            <Card
+              :id="post.sys.id"
+              :title="post.fields.title"
+              :thumbnail="post.fields.thumbnail.fields.file.url"
+              :tags="post.fields.tags"
+              :updated-at="post.fields.updatedAt"
+            />
+          </v-col>
+        </v-row>
+      </v-col>
+      <v-col cols="12" md="2">
+        <div class="mb-6 text-center">
+          <span class="font-weight-bold border--bottom-slight">タグ 一覧</span>
+        </div>
+        <Tag v-for="tag in tags" :key="tag.sys.id" :tag="tag" />
+      </v-col>
+    </v-row>
     <Pagination :total-count="totalCount" />
   </section>
 </template>
