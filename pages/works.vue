@@ -74,7 +74,7 @@ export default {
         {
           title: 'これ',
           link: 'https://gue-tech-blog.ga/',
-          description: 'ぐるなび と Airbnbを融合したアプリが作りたかった。',
+          description: '自作ブログ。Contentfulがマジ便利',
           img: 'https://i.gyazo.com/d36a17a8d779e01feeba99bd73e30a14.png',
           techs: ['NUXT', 'Contentful'],
           article: '',
