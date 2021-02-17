@@ -1,7 +1,7 @@
 <template>
   <v-row>
     <v-col cols="12" sm="10">
-      <v-card tile elevation="0">
+      <v-card tile elevation="0" style="background-color: #fffefc;">
         <h3
           class="font-weight-black black--text d-flex align-center"
           n-link

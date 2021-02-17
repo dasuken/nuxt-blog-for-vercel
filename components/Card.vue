@@ -5,10 +5,9 @@
         nuxt-link
         :to="`/posts/${id}`"
         :elevation="hover ? 13 : 3"
-        class="rounded-lg"
+        class="rounded-lg mb-5"
       >
-        <div style="height: 100%;" class="red"></div>
-        <v-img :src="thumbnail" aspect-ratio="2" class="align-end"></v-img>
+        <v-img :src="thumbnail" aspect-ratio="2"></v-img>
         <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
         <v-card-title
           class="text-h6 py-2 pb-4 font-weight-bold card--title"
