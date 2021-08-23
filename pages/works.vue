@@ -82,7 +82,8 @@ export default {
         {
           title: 'Gnavi',
           link: 'https://gue-tech-blog.ga/',
-          description: 'Airbnbとぐるなびを合体して見たかった。RDS、 ECSインスタンスがお高いので基本動かいてないです（）',
+          description:
+            'Airbnbとぐるなびを合体して見たかった。RDS, ECSインスタンスがお高いので基本動かいてないです()',
           img: 'https://i.gyazo.com/3d5bef0f5322b520deabb562dfc534c5.jpg',
           techs: ['rails', 'ECS', 'CircleCI'],
           article: '',
