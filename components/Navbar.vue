@@ -1,5 +1,5 @@
 <template>
-  <v-row>
+  <v-row class="navbar">
     <v-col cols="12" sm="10">
       <v-card tile elevation="0" style="background-color: #fffefc;">
         <h3

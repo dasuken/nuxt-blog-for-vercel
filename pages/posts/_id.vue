@@ -6,17 +6,17 @@
           {{ updatedAt }}
         </span>
       </div>
-      <h1 class="text-h3 font-weight-bold my-12" style="word-wrap: break-word;">
+      <v-img :src="post.fields.thumbnail.fields.file.url"></v-img>
+      <h1 class="text-h4 font-weight-bold mt-2" style="word-wrap: break-word;">
         {{ post.fields.title }}
       </h1>
-      <v-img :src="post.fields.thumbnail.fields.file.url"></v-img>
       <v-chip
         v-for="tag in post.fields.tags"
         :key="tag.sys.id"
         tag
         small
         dark
-        class="mt-2 mb-6 mr-1"
+        class="mt-2 mr-1"
       >
         {{ tag.fields.name }}
       </v-chip>
@@ -61,6 +61,14 @@ export default {
 .blog-contents {
   margin-top: 30px;
 
+  a {
+    color: orange !important;
+  }
+
+  a:hover {
+    border-bottom: darkorange 1px;
+  }
+
   img {
     max-width: 100%;
     max-height: 400px;
@@ -102,19 +110,9 @@ export default {
     margin: 3rem 0 1rem 0;
   }
 
-  // ul,
-  // ol {
-  //   background-color: #ffffee;
-  //   border: dashed 1px #ff9933;
-  //   padding: 40px;
-  //   margin: 20px 0;
-
-  //   li {
-  //     margin-bottom: 10px;
-  //     &:last-child {
-  //       margin-bottom: 0px !important;
-  //     }
-  //   }
-  // }
+  ul,
+  ol {
+    font-family: NotoSansJP-Medium !important;
+  }
 }
 </style>
