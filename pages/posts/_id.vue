@@ -21,17 +21,22 @@
         {{ tag.fields.name }}
       </v-chip>
       <div class="blog-contents">
-        <div v-html="$md.render(post.fields.content)"></div>
+        <markdown-it-vue :content="post.fields.content" />
       </div>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import MarkdownItVue from 'markdown-it-vue'
+
 import client from '@/plugins/contentful.js'
-import Prism from '@/plugins/prism'
+import 'markdown-it-vue/dist/markdown-it-vue.css'
 
 export default {
+  components: {
+    MarkdownItVue,
+  },
   async asyncData({ params }) {
     const post = await client.getEntry(params.id)
     return {
@@ -48,9 +53,6 @@ export default {
       const date = this.post.fields.updatedAt
       return this.$dayjs(date).format('YYYY/MM/DD')
     },
-  },
-  mounted() {
-    Prism.highlightAll()
   },
 }
 </script>
