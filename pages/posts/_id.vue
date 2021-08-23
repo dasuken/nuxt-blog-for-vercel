@@ -59,6 +59,8 @@ export default {
 
 <style lang="scss">
 .blog-contents {
+  margin-top: 30px;
+
   img {
     max-width: 100%;
     max-height: 400px;
@@ -72,45 +74,47 @@ export default {
   }
 
   pre {
-    margin-bottom: 20px;
-  }
-
-  code {
-    background-color: #322931;
-    color: gainsboro;
-    padding: 5px;
+    position: relative;
+    margin: 1.3rem 0;
+    background: #eee;
+    border-radius: 3px;
   }
 
   pre code {
-    display: block !important;
-    padding: 1rem !important;
+    margin: 0;
+    font-size: 0.9em;
+    color: #555555;
+  }
+
+  code {
+    background-color: #eee;
+    color: #555555;
+    padding: 5px;
   }
 
   h2 {
-    padding: 10px 0;
-    margin: 3rem 0 2rem 0;
-    border-bottom: 4px dashed #007d7a;
+    margin: 3rem 0 1rem 0;
+    border-bottom: double 5px #ef6c00;
+    padding: 0.5em 0 0.5em 0; /*文字周りの余白*/
   }
 
   h3 {
-    padding: 5px;
-    margin: 2rem 0 1rem 0;
-    border-left: 10px solid #007d7a;
+    margin: 3rem 0 1rem 0;
   }
 
-  ul,
-  ol {
-    background-color: #ffffee;
-    border: dashed 1px #ff9933;
-    padding: 40px;
-    margin: 20px 0;
+  // ul,
+  // ol {
+  //   background-color: #ffffee;
+  //   border: dashed 1px #ff9933;
+  //   padding: 40px;
+  //   margin: 20px 0;
 
-    li {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0px !important;
-      }
-    }
-  }
+  //   li {
+  //     margin-bottom: 10px;
+  //     &:last-child {
+  //       margin-bottom: 0px !important;
+  //     }
+  //   }
+  // }
 }
 </style>
