@@ -84,20 +84,40 @@ export default {
   pre {
     position: relative;
     margin: 1.3rem 0;
-    background: #eee;
+    background: #333333;
     border-radius: 3px;
   }
 
   pre code {
     margin: 0;
     font-size: 0.9em;
-    color: #555555;
+    color: #e3e3e3;
   }
 
   code {
     background-color: #eee;
     color: #555555;
     padding: 5px;
+
+    .hljs-literal {
+      color: #ff8e8e;
+    }
+
+    .hljs-built_in {
+      color: greenyellow;
+    }
+
+    .hljs-title {
+      color: skyblue;
+    }
+
+    .hljs-keyword {
+      color: orange;
+    }
+
+    .hljs-number {
+      color: #a980f5;
+    }
   }
 
   h2 {
