@@ -77,8 +77,8 @@ export default {
   }
 
   strong {
-    font-size: 25px;
-    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
   }
 
   pre {
@@ -101,13 +101,17 @@ export default {
   }
 
   h2 {
-    margin: 3rem 0 1rem 0;
+    margin-top: 3rem;
     border-bottom: double 5px #ef6c00;
     padding: 0.5em 0 0.5em 0; /*文字周りの余白*/
   }
 
   h3 {
-    margin: 3rem 0 1rem 0;
+    padding: 0.15em 0.5em; /*上下 左右の余白*/
+    color: #494949; /*文字色*/
+    background: transparent; /*背景透明に*/
+    border-left: solid 5px #494949; /*左線*/
+    margin-top: 2rem;
   }
 
   ul,
