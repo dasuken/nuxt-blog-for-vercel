@@ -18,7 +18,6 @@
 </template>
 
 <style>
-/* Helper classes */
 .basil {
   background-color: #fffbe6 !important;
 }
