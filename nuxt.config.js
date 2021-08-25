@@ -72,9 +72,7 @@ export default {
    ** https://github.com/nuxt-community/vuetify-module
    */
   vuetify: {
-    defaultAssets: {
-      icons: false,
-    },
+    defaultAssets: false,
     icons: {
       iconfont: "md"
     },

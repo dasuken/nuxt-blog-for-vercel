@@ -18,6 +18,7 @@ p {
   font-weight: 400;
   font-display: swap;
   src: url('./fonts/Roboto-Regular.ttf') format('truetype');
+  font-display: swap
 }
 
 @font-face {
@@ -26,6 +27,7 @@ p {
   font-weight: 500;
   font-display: swap;
   src: url('./fonts/Roboto-Medium.ttf') format('truetype');
+  font-display: swap
 }
 
 @font-face {
@@ -34,6 +36,7 @@ p {
   font-weight: 400;
   font-display: swap;
   src: url('./fonts/NotoSansJP-Regular.otf') format('truetype');
+  font-display: swap
 }
 
 @font-face {
@@ -42,4 +45,5 @@ p {
   font-weight: 500;
   font-display: swap;
   src: url('./fonts/NotoSansJP-Medium.otf') format('truetype');
+  font-display: swap
 }
