@@ -32,6 +32,11 @@ jobs:
           output_location: "dist" # Built app content directory - optional
           app_build_command: "npm run build && npm run export"
           ###### End of Repository/Build Configurations ######
+        env: # Add environment variables here
+          CTFL_ACCESS_TOKEN: ${{ secrets.CTFL_ACCESS_TOKEN }}
+          CTFL_CONTENT_TYPE_POST: ${{ secrets.CTFL_CONTENT_TYPE_POST }}
+          CTFL_SPACE: ${{ secrets.CTFL_SPACE }}
+          TRACKING_ID: ${{ secrets.TRACKING_ID }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
