@@ -10,6 +10,7 @@
               :thumbnail="post.fields.thumbnail.fields.file.url"
               :tags="post.fields.tags"
               :updated-at="post.fields.updatedAt"
+              :content="post.fields.content"
             />
           </v-col>
         </v-row>

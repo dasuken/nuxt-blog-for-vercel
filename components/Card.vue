@@ -5,18 +5,25 @@
         nuxt-link
         :to="`/posts/${id}`"
         :elevation="hover ? 3 : 0"
-        class="mt-n2 mb-n2 border-black"
+        class="mt-n2 mb-n2"
       >
         <v-row>
           <v-col cols="3">
-            <v-img :src="thumbnail" aspect-ratio="1.5"></v-img>
+            <v-img :src="thumbnail" aspect-ratio="1.3"></v-img>
           </v-col>
           <v-col cols="9">
-            <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
+            <v-card-text class="py-0 caption grey--text">
+              {{ updatedAt }}
+            </v-card-text>
             <v-card-title
-              class="text-h6 py-2 pb-4 font-weight-bold card--title"
-              style="height: 80px;"
+              class="text-h6 pt-0 pb-2 font-weight-bold card--title"
+              style="min-height: 65px;"
               >{{ title | shortenText }}</v-card-title
+            >
+            <v-card-text
+              class="font-weight-bold grey--text text-caption"
+              style=""
+              >{{ content | shortenContent }}</v-card-text
             >
             <div class="ml-2 pb-2" style="height: 40px;">
               <v-chip
@@ -43,13 +50,17 @@
 <script>
 export default {
   props: {
+    id: {
+      type: String,
+      required: true,
+    },
     title: {
       type: String,
       required: true,
     },
-    id: {
+    content: {
       type: String,
-      required: true,
+      default: '',
     },
     thumbnail: {
       type: String,
