@@ -4,31 +4,37 @@
       <v-card
         nuxt-link
         :to="`/posts/${id}`"
-        :elevation="hover ? 13 : 3"
-        class="rounded-lg mb-5"
+        :elevation="hover ? 3 : 0"
+        class="mt-n2 mb-n2 border-black"
       >
-        <v-img :src="thumbnail" aspect-ratio="2"></v-img>
-        <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
-        <v-card-title
-          class="text-h6 py-2 pb-4 font-weight-bold card--title"
-          style="height: 80px;"
-          >{{ title | shortenText }}</v-card-title
-        >
-        <div class="ml-2 pb-2" style="height: 40px;">
-          <v-chip
-            v-for="tag in tags"
-            :key="tag.sys.id"
-            class="ma-1"
-            color="basil"
-            tag
-            small
-            outlined
-            n-link
-            :to="`/tags/${tag.sys.id}`"
-          >
-            {{ tag.fields.name }}
-          </v-chip>
-        </div>
+        <v-row>
+          <v-col cols="3">
+            <v-img :src="thumbnail" aspect-ratio="1.5"></v-img>
+          </v-col>
+          <v-col cols="9">
+            <v-card-text class="py-1">{{ updatedAt }}</v-card-text>
+            <v-card-title
+              class="text-h6 py-2 pb-4 font-weight-bold card--title"
+              style="height: 80px;"
+              >{{ title | shortenText }}</v-card-title
+            >
+            <div class="ml-2 pb-2" style="height: 40px;">
+              <v-chip
+                v-for="tag in tags"
+                :key="tag.sys.id"
+                class="ma-1"
+                color="basil"
+                tag
+                small
+                outlined
+                n-link
+                :to="`/tags/${tag.sys.id}`"
+              >
+                {{ tag.fields.name }}
+              </v-chip>
+            </div>
+          </v-col>
+        </v-row>
       </v-card>
     </template>
   </v-hover>
