@@ -1,12 +1,22 @@
 <template>
   <v-row justify="center">
-    <v-col cols="12" sm="8">
+    <v-col cols="12">
       <div class="mb-2 font-weight-bold grey--text">
         <span>
           {{ updatedAt }}
         </span>
       </div>
-      <v-img :src="post.fields.thumbnail.fields.file.url"></v-img>
+      <v-row justify="center" class="mb-5">
+        <v-col cols="12" sm="8">
+          <v-img
+            :src="post.fields.thumbnail.fields.file.url"
+            aspect-ratio="1.5"
+            class="rounded-xl"
+          >
+          </v-img>
+        </v-col>
+      </v-row>
+
       <h1 class="text-h4 font-weight-bold mt-2" style="word-wrap: break-word;">
         {{ post.fields.title }}
       </h1>

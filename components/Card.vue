@@ -4,8 +4,8 @@
       <v-card
         nuxt-link
         :to="`/posts/${id}`"
-        :elevation="hover ? 3 : 0"
-        class="mt-n2 mb-n2"
+        :elevation="hover ? 2 : 0"
+        class="mt-n2 mb-n2 pa-1"
       >
         <v-row>
           <v-col cols="3">
