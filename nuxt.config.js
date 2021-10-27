@@ -14,15 +14,15 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    titleTemplate: '%s - ' + 'gue_tech.com',
-    title: "gue_tech.com" || '',
+    titleTemplate: '%s | ' + 'gue_techblog',
+    title: "gue_techblog" || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: 'description',
       },
       { name: 'google-site-verification', content: '3v_zumBJHEvjPHU6KNX8fnnPQoR5jDz4ot60wi10imY' },
     ],

@@ -82,6 +82,19 @@ export default {
       totalCount,
     }
   },
+  head() {
+    return {
+      title: 'gue-techblog',
+      titleTemplate: '',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'goを中心に備忘録',
+        },
+      ],
+    }
+  },
 }
 </script>
 

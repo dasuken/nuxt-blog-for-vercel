@@ -49,13 +49,20 @@ export default {
   },
   async asyncData({ params }) {
     const post = await client.getEntry(params.id)
+
+    // headタグ用の要素
+    const maxLength = 100
+    const content = post.fields.content
+    let description
+    if (content[0] === '#' && content[1] === '#') {
+      description = content.substr(3)
+    }
+    const finalChar = description.length > maxLength ? '...' : ''
+    description = description.slice(0, maxLength) + finalChar
+
     return {
       post,
-    }
-  },
-  head() {
-    return {
-      title: this.post && this.post.fields.title,
+      description,
     }
   },
   computed: {
@@ -63,6 +70,18 @@ export default {
       const date = this.post.fields.updatedAt
       return this.$dayjs(date).format('YYYY/MM/DD')
     },
+  },
+  head() {
+    return {
+      title: this.post && this.post.fields.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description,
+        },
+      ],
+    }
   },
 }
 </script>
