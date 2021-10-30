@@ -1,7 +1,5 @@
 # nuxt-blog
 
-## Build Setup
-
 ```bash
 # install dependencies
 $ npm install
