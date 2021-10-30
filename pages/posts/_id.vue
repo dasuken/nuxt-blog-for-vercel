@@ -56,7 +56,10 @@ export default {
     let description
     if (content[0] === '#' && content[1] === '#') {
       description = content.substr(3)
+    } else {
+      description = content
     }
+
     const finalChar = description.length > maxLength ? '...' : ''
     description = description.slice(0, maxLength) + finalChar
 
