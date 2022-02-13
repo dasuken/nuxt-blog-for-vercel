@@ -64,19 +64,28 @@ export default {
         },
         {
           title: 'KUYOU',
-          link: 'https://haraichi-chat.tk/',
+          link: 'https://haraichi-kuyou.com/',
           description:
             '読まれなかったコーナーメールを供養するために作ったサービス。Apollo-composable composition-apiの挙動にかなり悩まされた',
           img: 'https://i.gyazo.com/2e40f44f5156ab0e3f97fabd4937828d.jpg',
-          techs: ['Vue2', 'Graphql', 'Express'],
+          techs: ['Vue2', 'Graphql', 'Express', 'apollo-client'],
           article: '',
         },
         {
           title: 'これ',
-          link: 'https://gue-tech-blog.ga/',
+          link: 'https://gue-techblog.com/',
+          // link: 'https://gue-tech-blog.ga/',
           description: '自作ブログ。Contentfulがマジ便利',
           img: 'https://i.gyazo.com/d36a17a8d779e01feeba99bd73e30a14.png',
           techs: ['Nuxt', 'Contentful'],
+          article: '',
+        },
+        {
+          title: 'nbaスレ翻訳',
+          link: 'https://www.nba-honyaku.net/posts/sr5jzi',
+          description: 'redditのnba関連スレッドを自動で日本語翻訳して表示するサイト',
+          img: 'https://i.gyazo.com/510aa2967aae77155db7ba759eb3ed5a.png',
+          techs: ['Vue', 'Golang', 'Lambda', 'dynamodb'],
           article: '',
         },
         {
