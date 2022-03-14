@@ -66,7 +66,7 @@ export default {
           title: 'KUYOU',
           link: 'https://haraichi-kuyou.com/',
           description:
-            '読まれなかったコーナーメールを供養するために作ったサービス。のはずが、サイト自体が供養されてしまうという皮肉',
+            '読まれなかった没メールを供養するために作ったサービス。のはずが、サイト自体が没になる',
           img: 'https://i.gyazo.com/2e40f44f5156ab0e3f97fabd4937828d.jpg',
           techs: ['Vue2', 'Graphql', 'Express', 'apollo-client'],
           article: '',
@@ -87,6 +87,13 @@ export default {
           img: 'https://i.gyazo.com/510aa2967aae77155db7ba759eb3ed5a.png',
           techs: ['Vue', 'Golang', 'Lambda', 'dynamodb'],
           article: '',
+        },
+        {
+          title: 'sshctl',
+          link: 'https://github.com/dasuken/sshctl',
+          description: 'ssh configを編集するcli',
+          techs: ['Golang'],
+          article: 'https://speakerdeck.com/dasuken/oss-gov2',
         },
         {
           title: 'Gnavi',
