@@ -92,6 +92,7 @@ export default {
           title: 'sshctl',
           link: 'https://github.com/dasuken/sshctl',
           description: 'ssh configを編集するcli',
+          img: 'https://raw.githubusercontent.com/dasuken/sshctl/main/docs/add_commandline2.png',
           techs: ['Golang'],
           article: 'https://speakerdeck.com/dasuken/oss-gov2',
         },
